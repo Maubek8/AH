@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eixo Vital – Lidiane Rodrigues</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <img src="assets/logo.png" alt="Logo MK" class="logo">
+    <div class="header-text">
+      <h1>Eixo Vital – Terapia Integrada para Lidiane Rodrigues</h1>
+      <p>Dr. Mauricio Kraemer | <a href="https://www.mk-cardiosport.com" target="_blank">MK-CARDIOSPORT</a></p>
+    </div>
+  </header>
+
+  <section class="chart-section">
+    <h2>Onde atuam os suplementos?</h2>
+    <canvas id="supplementPieChart"></canvas>
+    <div id="supplementInfo"></div>
+  </section>
+
+  <section class="hho-axis">
+    <h2>Eixo HHO (Hipotálamo–Hipófise–Ovários)</h2>
+    <div class="hho-graphic" id="hhoDefault">
+      <!-- Gráfico base com estado atual -->
+      <div style="height:100%; display:flex; align-items:center; justify-content:center; color:#888; font-size:1.2rem;">
+        Eixo HHO desregulado - Feedback negativo ativo
+      </div>
+    </div>
+    <button id="trhActivate">Ativar TRH</button>
+    <div class="hho-graphic" id="hhoAfter" style="display:none;">
+      <!-- Gráfico com setas neon e cores vibrantes -->
+    </div>
+  </section>
+
+  <section class="tabela-hormonal">
+    <h2>Terapia Hormonal Recomendada</h2>
+    <table>
+      <tr><th>Hormônio</th><th>Forma</th><th>Dose</th><th>Via</th><th>Observações</th></tr>
+      <tr><td>Estradiol</td><td>Transdérmico</td><td>0,025–0,05 mg/dia</td><td>Gel/adesivo</td><td>Evitar picos, manter estabilidade</td></tr>
+      <tr><td>Progesterona</td><td>Micronizada</td><td>100–200 mg</td><td>Vaginal</td><td>Proteger endométrio, melhora sono</td></tr>
+      <tr><td>Testosterona</td><td>Base creme</td><td>1 mg/dia</td><td>Antebraço/coxa</td><td>Libido, lubrificação, energia</td></tr>
+    </table>
+  </section>
+
+  <section class="tabela-suplementos">
+    <h2>Suplementação Estratégica (Evidência A e B+)</h2>
+    <table>
+      <tr><th>Suplemento</th><th>Evidência</th><th>Dose</th><th>Benefícios</th></tr>
+      <tr><td>Ômega-3 (EPA/DHA)</td><td>A</td><td>1–2 g/dia</td><td>Cérebro, pele, lubrificação</td></tr>
+      <tr><td>Creatina</td><td>A</td><td>3–5 g/dia</td><td>Energia, cognição, libido</td></tr>
+      <tr><td>Vitamina D + K2</td><td>A</td><td>2–5 mil UI</td><td>Ossos, imunidade</td></tr>
+      <tr><td>Magnésio</td><td>A</td><td>200–400 mg</td><td>Relaxamento, TPM</td></tr>
+      <tr><td>Complexo B ativo</td><td>A</td><td>manipulado</td><td>Humor, cognição</td></tr>
+      <tr><td>Zinco + Selênio</td><td>A</td><td>10–30 mg / 100–200 mcg</td><td>Imunidade, tireoide</td></tr>
+      <tr><td>NAC</td><td>B+</td><td>600–1200 mg</td><td>Detox, clareza mental</td></tr>
+    </table>
+  </section>
+
+  <section class="orientacoes">
+    <h2>Orientações de Uso</h2>
+    <ul>
+      <li>Iniciar hormônios conforme posologia acima. Aplicar pela manhã (estradiol, testosterona) e à noite (progesterona).</li>
+      <li>Tomar suplementos junto às principais refeições.</li>
+    </ul>
+
+    <h3>Repetir em 4 semanas:</h3>
+    <ul>
+      <li>Estradiol, Testosterona Total e Livre, SHBG, FSH, LH</li>
+      <li>Ultrassom transvaginal</li>
+    </ul>
+
+    <h3>Acompanhamento nos próximos 6 a 9 meses:</h3>
+    <ul>
+      <li>Perfil lipídico completo</li>
+      <li>Glicemia e HbA1c</li>
+      <li>Vitamina D</li>
+      <li>Creatinina, TGO, TGP</li>
+      <li>Reavaliação sintomática e ajustes</li>
+    </ul>
+  </section>
+
+  <footer class="rodape">
+    <a href="assets/pres.pdf" download class="download-btn">Baixar Prescrição</a>
+    <p>Desenvolvido por Dr. Mauricio Kraemer • MK-CARDIOSPORT • Todos os direitos reservados</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/main.js"></script>
+</body>
+</html>
