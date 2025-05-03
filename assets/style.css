@@ -210,3 +210,57 @@ footer.rodape {
     font-size: 0.9rem;
   }
 }
+
+/* Gráficos - Versão Otimizada */
+.chart-section {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.chart-container {
+  position: relative;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 500px;
+}
+
+.chart-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.chart-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip {
+  background: rgba(15, 15, 15, 0.9);
+  border: 1px solid #f5c400;
+  border-radius: 8px;
+  padding: 15px;
+  color: white;
+  display: none;
+  max-width: 80%;
+}
+
+.hho-container {
+  position: relative;
+  height: 200px;
+  margin: 20px 0;
+}
+
+.hho-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
