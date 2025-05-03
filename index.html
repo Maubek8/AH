@@ -9,87 +9,430 @@
 </head>
 <body>
   <header class="header">
-    <img src="assets/logo.png" alt="Logo MK" class="logo">
+    <img src="assets/logo.png" alt="Logo Eixo Vital" class="logo">
     <div class="header-text">
       <h1>Eixo Vital – Terapia Integrada para Lidiane Rodrigues</h1>
       <p>Dr. Mauricio Kraemer | <a href="https://www.mk-cardiosport.com" target="_blank">MK-CARDIOSPORT</a></p>
     </div>
   </header>
 
-  <section class="chart-section">
-  <!-- Substitua toda a seção de gráficos por este código -->
-<section class="chart-section">
-  <h2>Onde atuam os suplementos?</h2>
-  <div class="chart-container">
-    <img src="assets/pie-chart.png" alt="Gráfico de Atuação dos Suplementos" class="chart-img">
-    <div class="chart-overlay" id="pieChartOverlay">
-      <div class="tooltip" id="pieTooltip"></div>
-    </div>
-  </div>
-</section>
+  <main class="container">
+    <!-- Gráfico de Pizza Animado -->
+    <section class="chart-section">
+      <h2>Onde atuam os suplementos?</h2>
+      <div class="chart-container">
+        <svg id="pieChart" viewBox="0 0 400 400" width="100%" height="100%"></svg>
+        <div id="pieTooltip" class="tooltip"></div>
+      </div>
+    </section>
 
-<section class="hho-axis">
-  <h2>Eixo HHO (Hipotálamo–Hipófise–Ovários)</h2>
-  <div class="hho-container">
-    <img src="assets/hho-inactive.png" alt="Eixo HHO Inativo" id="hhoDefault">
-    <img src="assets/hho-active.png" alt="Eixo HHO Ativo" id="hhoAfter" style="display:none;">
-  </div>
-  <button id="trhActivate">Ativar TRH</button>
-</section>
+    <!-- Eixo HHO Interativo -->
+    <section class="hho-axis">
+      <h2>Eixo HHO (Hipotálamo–Hipófise–Ovários)</h2>
+      <div class="hho-container">
+        <svg id="hhoDefault" viewBox="0 0 800 250" width="100%" height="100%"></svg>
+        <svg id="hhoActive" viewBox="0 0 800 250" width="100%" height="100%" style="display:none;"></svg>
+      </div>
+      <button id="activateTRH">Ativar TRH</button>
+    </section>
 
-  <section class="tabela-hormonal">
-    <h2>Terapia Hormonal Recomendada</h2>
-    <table>
-      <tr><th>Hormônio</th><th>Forma</th><th>Dose</th><th>Via</th><th>Observações</th></tr>
-      <tr><td>Estradiol</td><td>Transdérmico</td><td>0,025–0,05 mg/dia</td><td>Gel/adesivo</td><td>Evitar picos, manter estabilidade</td></tr>
-      <tr><td>Progesterona</td><td>Micronizada</td><td>100–200 mg</td><td>Vaginal</td><td>Proteger endométrio, melhora sono</td></tr>
-      <tr><td>Testosterona</td><td>Base creme</td><td>1 mg/dia</td><td>Antebraço/coxa</td><td>Libido, lubrificação, energia</td></tr>
-    </table>
-  </section>
+    <!-- TRH Inicial -->
+    <section class="tabela-hormonal">
+      <h2>Terapia Hormonal Recomendada (TRH Inicial)</h2>
+      <ol class="prescription-list">
+        <li>
+          <strong>Estradiol transdérmico</strong>
+          <ul>
+            <li><strong>Dose:</strong> 0,025–0,05 mg/dia</li>
+            <li><strong>Forma:</strong> Gel ou adesivo</li>
+            <li><strong>Orientação:</strong> Aplicar pela manhã após o banho</li>
+            <li><strong>Objetivo:</strong> Reposição estrogênica fisiológica</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Progesterona micronizada</strong>
+          <ul>
+            <li><strong>Dose:</strong> 100–200 mg/dia</li>
+            <li><strong>Forma:</strong> Cápsulas</li>
+            <li><strong>Orientação:</strong> Uso vaginal à noite</li>
+            <li><strong>Objetivo:</strong> Proteção endometrial</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Testosterona em creme</strong>
+          <ul>
+            <li><strong>Dose:</strong> 1 mg/dia (1 pump)</li>
+            <li><strong>Forma:</strong> Creme transdérmico</li>
+            <li><strong>Orientação:</strong> Aplicar pela manhã</li>
+            <li><strong>Objetivo:</strong> Libido e energia</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
 
-  <section class="tabela-suplementos">
-    <h2>Suplementação Estratégica (Evidência A e B+)</h2>
-    <table>
-      <tr><th>Suplemento</th><th>Evidência</th><th>Dose</th><th>Benefícios</th></tr>
-      <tr><td>Ômega-3 (EPA/DHA)</td><td>A</td><td>1–2 g/dia</td><td>Cérebro, pele, lubrificação</td></tr>
-      <tr><td>Creatina</td><td>A</td><td>3–5 g/dia</td><td>Energia, cognição, libido</td></tr>
-      <tr><td>Vitamina D + K2</td><td>A</td><td>2–5 mil UI</td><td>Ossos, imunidade</td></tr>
-      <tr><td>Magnésio</td><td>A</td><td>200–400 mg</td><td>Relaxamento, TPM</td></tr>
-      <tr><td>Complexo B ativo</td><td>A</td><td>manipulado</td><td>Humor, cognição</td></tr>
-      <tr><td>Zinco + Selênio</td><td>A</td><td>10–30 mg / 100–200 mcg</td><td>Imunidade, tireoide</td></tr>
-      <tr><td>NAC</td><td>B+</td><td>600–1200 mg</td><td>Detox, clareza mental</td></tr>
-    </table>
-  </section>
+    <!-- Protocolo de Suplementação -->
+    <section class="tabela-suplementos">
+      <h2>Protocolo de Suplementação</h2>
+      <ol class="prescription-list">
+        <li>
+          <strong>Ômega-3 (EPA/DHA)</strong>
+          <ul>
+            <li><strong>Dose:</strong> 1–2 g/dia</li>
+            <li><strong>Horário:</strong> Maior refeição</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Creatina monohidratada</strong>
+          <ul>
+            <li><strong>Dose:</strong> 3–5 g/dia</li>
+            <li><strong>Horário:</strong> Manhã ou pré-treino</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Vitamina D3 + K2 MK-7</strong>
+          <ul>
+            <li><strong>Dose:</strong> 2.000–5.000 UI</li>
+            <li><strong>Horário:</strong> Refeição com gordura</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Magnésio bisglicinato</strong>
+          <ul>
+            <li><strong>Dose:</strong> 200–400 mg/dia</li>
+            <li><strong>Horário:</strong> Noturno</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Complexo B ativo</strong>
+          <ul>
+            <li><strong>Dose:</strong> 1 cápsula/dia</li>
+            <li><strong>Horário:</strong> Manhã</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Zinco + Selênio</strong>
+          <ul>
+            <li><strong>Dose:</strong> Zinco 15–30mg + Selênio 100–200mcg</li>
+            <li><strong>Horário:</strong> Refeição</li>
+          </ul>
+        </li>
+        <li>
+          <strong>NAC (N-Acetilcisteína)</strong>
+          <ul>
+            <li><strong>Dose:</strong> 600–1.200 mg/dia</li>
+            <li><strong>Horário:</strong> Jejum</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
 
-  <section class="orientacoes">
-    <h2>Orientações de Uso</h2>
-    <ul>
-      <li>Iniciar hormônios conforme posologia acima. Aplicar pela manhã (estradiol, testosterona) e à noite (progesterona).</li>
-      <li>Tomar suplementos junto às principais refeições.</li>
-    </ul>
-
-    <h3>Repetir em 4 semanas:</h3>
-    <ul>
-      <li>Estradiol, Testosterona Total e Livre, SHBG, FSH, LH</li>
-      <li>Ultrassom transvaginal</li>
-    </ul>
-
-    <h3>Acompanhamento nos próximos 6 a 9 meses:</h3>
-    <ul>
-      <li>Perfil lipídico completo</li>
-      <li>Glicemia e HbA1c</li>
-      <li>Vitamina D</li>
-      <li>Creatinina, TGO, TGP</li>
-      <li>Reavaliação sintomática e ajustes</li>
-    </ul>
-  </section>
+    <!-- Orientações -->
+    <section class="orientacoes">
+      <h2>Orientações Gerais</h2>
+      <ul>
+        <li>Iniciar hormônios conforme escalonamento</li>
+        <li>Suplementos preferencialmente com refeições (exceto NAC)</li>
+        <li>Monitorar sintomas e ajustar conforme necessidade</li>
+      </ul>
+      
+      <h3>Próximos exames (4 semanas):</h3>
+      <ul>
+        <li>Estradiol, Testosterona Total e Livre, SHBG</li>
+        <li>FSH, LH</li>
+        <li>Ultrassom transvaginal</li>
+      </ul>
+    </section>
+  </main>
 
   <footer class="rodape">
-    <a href="assets/pres.pdf" download class="download-btn">Baixar Prescrição</a>
+    <a href="assets/pres.pdf" download class="download-btn">Baixar Prescrição Completa</a>
     <p>Desenvolvido por Dr. Mauricio Kraemer • MK-CARDIOSPORT • Todos os direitos reservados</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="assets/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // ============= GRÁFICO DE PIZZA ANIMADO =============
+      const pieChart = document.getElementById('pieChart');
+      const pieTooltip = document.getElementById('pieTooltip');
+      
+      const pieData = [
+        { name: "Cérebro/Humor", value: 15, color: "#f5c400", supplements: ["Ômega-3", "NAC", "Complexo B"] },
+        { name: "Cognição/Energia", value: 20, color: "#03a9f4", supplements: ["Creatina", "B12", "Magnésio"] },
+        { name: "Lubrificação/Libido", value: 15, color: "#ff9800", supplements: ["Testosterona", "Ômega-3"] },
+        { name: "Sono/Relaxamento", value: 10, color: "#4caf50", supplements: ["Magnésio", "Progesterona"] },
+        { name: "Sistema Hormonal", value: 25, color: "#9c27b0", supplements: ["Estradiol", "Progesterona", "Testosterona"] },
+        { name: "Imunidade/Detox", value: 15, color: "#e91e63", supplements: ["Zinco", "Selênio", "NAC"] }
+      ];
+
+      const totalValue = pieData.reduce((sum, item) => sum + item.value, 0);
+      let startAngle = 0;
+      const centerX = 200;
+      const centerY = 200;
+      const radius = 180;
+      const animationDuration = 2000; // 2 segundos
+      const startTime = Date.now();
+
+      function animatePieChart() {
+        const currentTime = Date.now();
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / animationDuration, 1);
+        
+        // Limpa o SVG
+        pieChart.innerHTML = '';
+        
+        // Adiciona cada setor animado
+        pieData.forEach((item, index) => {
+          const sectorAngle = (item.value / totalValue) * 2 * Math.PI * progress;
+          const endAngle = startAngle + sectorAngle;
+          
+          const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+          const x1 = centerX + radius * Math.cos(startAngle);
+          const y1 = centerY + radius * Math.sin(startAngle);
+          const x2 = centerX + radius * Math.cos(endAngle);
+          const y2 = centerY + radius * Math.sin(endAngle);
+          
+          const largeArcFlag = sectorAngle <= Math.PI ? "0" : "1";
+          
+          const pathData = [
+            `M ${centerX} ${centerY}`,
+            `L ${x1} ${y1}`,
+            `A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2}`,
+            "Z"
+          ].join(" ");
+          
+          path.setAttribute("d", pathData);
+          path.setAttribute("fill", item.color);
+          path.setAttribute("stroke", "#0b0c10");
+          path.setAttribute("stroke-width", "2");
+          path.setAttribute("data-name", item.name);
+          path.setAttribute("data-supplements", item.supplements.join(", "));
+          
+          // Eventos para tooltip
+          path.addEventListener("mouseenter", showTooltip);
+          path.addEventListener("mouseleave", hideTooltip);
+          
+          pieChart.appendChild(path);
+          startAngle = endAngle;
+        });
+        
+        // Adiciona título central após animação
+        if (progress === 1) {
+          const title = document.createElementNS("http://www.w3.org/2000/svg", "text");
+          title.setAttribute("x", centerX);
+          title.setAttribute("y", centerY);
+          title.setAttribute("text-anchor", "middle");
+          title.setAttribute("dominant-baseline", "middle");
+          title.setAttribute("fill", "#ffffff");
+          title.setAttribute("font-size", "20");
+          title.textContent = "Suplementos";
+          pieChart.appendChild(title);
+        } else {
+          requestAnimationFrame(animatePieChart);
+        }
+      }
+
+      function showTooltip(e) {
+        const name = e.target.getAttribute("data-name");
+        const supplements = e.target.getAttribute("data-supplements");
+        const rect = pieChart.getBoundingClientRect();
+        
+        pieTooltip.innerHTML = `<strong>${name}</strong><br>${supplements}`;
+        pieTooltip.style.display = "block";
+        pieTooltip.style.left = `${e.clientX - rect.left + 15}px`;
+        pieTooltip.style.top = `${e.clientY - rect.top + 15}px`;
+      }
+
+      function hideTooltip() {
+        pieTooltip.style.display = "none";
+      }
+
+      // ============= EIXO HHO INTERATIVO =============
+      const hhoDefault = document.getElementById('hhoDefault');
+      const hhoActive = document.getElementById('hhoActive');
+      const activateBtn = document.getElementById('activateTRH');
+      
+      // Desenha o estado padrão (inativo)
+      function drawInactiveHHO() {
+        // Órgãos
+        drawOrgan(hhoDefault, 150, 125, "Hipotálamo", "#03a9f4", 0.3);
+        drawOrgan(hhoDefault, 400, 125, "Hipófise", "#9c27b0", 0.3);
+        drawOrgan(hhoDefault, 650, 125, "Ovários", "#4caf50", 0.3);
+        
+        // Setas desconectadas
+        drawDashedArrow(hhoDefault, 200, 125, 350, 125, "#888");
+        drawDashedArrow(hhoDefault, 450, 125, 600, 125, "#888");
+        
+        // Texto de status
+        const statusText = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        statusText.setAttribute("x", "400");
+        statusText.setAttribute("y", "200");
+        statusText.setAttribute("text-anchor", "middle");
+        statusText.setAttribute("fill", "#888");
+        statusText.setAttribute("font-size", "18");
+        statusText.textContent = "Eixo HHO Desregulado - Feedback Negativo Ativo";
+        hhoDefault.appendChild(statusText);
+      }
+      
+      // Desenha o estado ativo
+      function drawActiveHHO() {
+        // Filtro de efeito neon
+        const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+        const filter = document.createElementNS("http://www.w3.org/2000/svg", "filter");
+        filter.setAttribute("id", "glow");
+        
+        const feGaussianBlur = document.createElementNS("http://www.w3.org/2000/svg", "feGaussianBlur");
+        feGaussianBlur.setAttribute("stdDeviation", "3");
+        feGaussianBlur.setAttribute("result", "blur");
+        
+        const feComposite = document.createElementNS("http://www.w3.org/2000/svg", "feComposite");
+        feComposite.setAttribute("in", "SourceGraphic");
+        feComposite.setAttribute("in2", "blur");
+        feComposite.setAttribute("operator", "over");
+        
+        filter.appendChild(feGaussianBlur);
+        filter.appendChild(feComposite);
+        defs.appendChild(filter);
+        
+        // Marcador de seta
+        const marker = document.createElementNS("http://www.w3.org/2000/svg", "marker");
+        marker.setAttribute("id", "arrowhead");
+        marker.setAttribute("markerWidth", "10");
+        marker.setAttribute("markerHeight", "7");
+        marker.setAttribute("refX", "9");
+        marker.setAttribute("refY", "3.5");
+        marker.setAttribute("orient", "auto");
+        
+        const polygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+        polygon.setAttribute("points", "0 0, 10 3.5, 0 7");
+        polygon.setAttribute("fill", "#f5c400");
+        
+        marker.appendChild(polygon);
+        defs.appendChild(marker);
+        hhoActive.appendChild(defs);
+        
+        // Órgãos com efeito neon
+        drawOrgan(hhoActive, 150, 125, "Hipotálamo", "#03a9f4", 0.8, true);
+        drawOrgan(hhoActive, 400, 125, "Hipófise", "#9c27b0", 0.8, true);
+        drawOrgan(hhoActive, 650, 125, "Ovários", "#4caf50", 0.8, true);
+        
+        // Setas com animação de fluxo
+        drawFlowingArrow(hhoActive, 200, 125, 350, 125, "#f5c400");
+        drawFlowingArrow(hhoActive, 450, 125, 600, 125, "#f5c400");
+        
+        // Texto de status
+        const statusText = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        statusText.setAttribute("x", "400");
+        statusText.setAttribute("y", "200");
+        statusText.setAttribute("text-anchor", "middle");
+        statusText.setAttribute("fill", "#f5c400");
+        statusText.setAttribute("font-size", "18");
+        statusText.setAttribute("font-weight", "bold");
+        statusText.textContent = "Eixo HHO Ativado - Fluxo Hormonal Restaurado";
+        hhoActive.appendChild(statusText);
+      }
+      
+      // Funções auxiliares para desenhar elementos
+      function drawOrgan(svg, x, y, name, color, opacity, glow = false) {
+        const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("cx", x);
+        circle.setAttribute("cy", y);
+        circle.setAttribute("r", "50");
+        circle.setAttribute("fill", color);
+        circle.setAttribute("opacity", opacity);
+        circle.setAttribute("stroke", color);
+        circle.setAttribute("stroke-width", "3");
+        if (glow) circle.setAttribute("filter", "url(#glow)");
+        group.appendChild(circle);
+        
+        const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        text.setAttribute("x", x);
+        text.setAttribute("y", y + 80);
+        text.setAttribute("text-anchor", "middle");
+        text.setAttribute("fill", glow ? "#ffffff" : color);
+        text.setAttribute("font-size", "16");
+        if (glow) text.setAttribute("font-weight", "bold");
+        text.textContent = name;
+        group.appendChild(text);
+        
+        svg.appendChild(group);
+      }
+      
+      function drawDashedArrow(svg, x1, y1, x2, y2, color) {
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", x1);
+        line.setAttribute("y1", y1);
+        line.setAttribute("x2", x2);
+        line.setAttribute("y2", y2);
+        line.setAttribute("stroke", color);
+        line.setAttribute("stroke-width", "2");
+        line.setAttribute("stroke-dasharray", "5,5");
+        svg.appendChild(line);
+      }
+      
+      function drawFlowingArrow(svg, x1, y1, x2, y2, color) {
+        const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", x1);
+        line.setAttribute("y1", y1);
+        line.setAttribute("x2", x2);
+        line.setAttribute("y2", y2);
+        line.setAttribute("stroke", color);
+        line.setAttribute("stroke-width", "3");
+        line.setAttribute("marker-end", "url(#arrowhead)");
+        group.appendChild(line);
+        
+        // Animação de fluxo
+        const animate = document.createElementNS("http://www.w3.org/2000/svg", "animate");
+        animate.setAttribute("attributeName", "stroke-dashoffset");
+        animate.setAttribute("from", "100");
+        animate.setAttribute("to", "0");
+        animate.setAttribute("dur", "2s");
+        animate.setAttribute("repeatCount", "indefinite");
+        line.appendChild(animate);
+        
+        svg.appendChild(group);
+      }
+      
+      // Botão de ativação
+      activateBtn.addEventListener('click', function() {
+        hhoDefault.style.display = 'none';
+        hhoActive.style.display = 'block';
+        
+        // Efeito de confete
+        createConfettiEffect();
+      });
+      
+      function createConfettiEffect() {
+        const colors = ['#f5c400', '#03a9f4', '#4caf50', '#9c27b0', '#e91e63'];
+        const container = document.querySelector('.hho-container');
+        
+        for (let i = 0; i < 50; i++) {
+          setTimeout(() => {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = `${Math.random() * 100}%`;
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+            confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            
+            container.appendChild(confetti);
+            
+            // Remove após animação
+            setTimeout(() => {
+              confetti.remove();
+            }, 3000);
+          }, i * 50);
+        }
+      }
+      
+      // Inicializa os gráficos
+      drawInactiveHHO();
+      drawActiveHHO();
+      animatePieChart();
+    });
+  </script>
 </body>
 </html>
