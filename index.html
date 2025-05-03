@@ -17,24 +17,25 @@
   </header>
 
   <section class="chart-section">
-    <h2>Onde atuam os suplementos?</h2>
-    <canvas id="supplementPieChart"></canvas>
-    <div id="supplementInfo"></div>
-  </section>
+  <!-- Substitua toda a seção de gráficos por este código -->
+<section class="chart-section">
+  <h2>Onde atuam os suplementos?</h2>
+  <div class="chart-container">
+    <img src="assets/pie-chart.png" alt="Gráfico de Atuação dos Suplementos" class="chart-img">
+    <div class="chart-overlay" id="pieChartOverlay">
+      <div class="tooltip" id="pieTooltip"></div>
+    </div>
+  </div>
+</section>
 
-  <section class="hho-axis">
-    <h2>Eixo HHO (Hipotálamo–Hipófise–Ovários)</h2>
-    <div class="hho-graphic" id="hhoDefault">
-      <!-- Gráfico base com estado atual -->
-      <div style="height:100%; display:flex; align-items:center; justify-content:center; color:#888; font-size:1.2rem;">
-        Eixo HHO desregulado - Feedback negativo ativo
-      </div>
-    </div>
-    <button id="trhActivate">Ativar TRH</button>
-    <div class="hho-graphic" id="hhoAfter" style="display:none;">
-      <!-- Gráfico com setas neon e cores vibrantes -->
-    </div>
-  </section>
+<section class="hho-axis">
+  <h2>Eixo HHO (Hipotálamo–Hipófise–Ovários)</h2>
+  <div class="hho-container">
+    <img src="assets/hho-inactive.png" alt="Eixo HHO Inativo" id="hhoDefault">
+    <img src="assets/hho-active.png" alt="Eixo HHO Ativo" id="hhoAfter" style="display:none;">
+  </div>
+  <button id="trhActivate">Ativar TRH</button>
+</section>
 
   <section class="tabela-hormonal">
     <h2>Terapia Hormonal Recomendada</h2>
